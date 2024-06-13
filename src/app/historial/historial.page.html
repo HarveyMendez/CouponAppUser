@@ -1,0 +1,34 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Historial</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list >
+          <ion-item *ngFor="let compra of historialCompras">
+            <ion-label>
+              <ion-list *ngFor="let cupon of compra.cupones">
+                <ion-img *ngIf="cupon.image" [src]="cupon.image"></ion-img>
+                <ion-item>Ubicación: {{ cupon.ubicacion_empresa }}</ion-item>
+              <ion-item>Empresa: {{ cupon.nombre_empresa }}</ion-item>
+            </ion-list>
+            <ion-item>
+              <ion-label>Precio Pagado:</ion-label>
+              <ion-note slot="end">{{ calcularTotalConImpuestos(compra.total) }}$</ion-note>
+            </ion-item>
+          </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+
+    </div>
+  </ion-split-pane>
+</ion-app>
+

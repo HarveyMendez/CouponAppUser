@@ -1,0 +1,66 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Info Cupon</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-card *ngIf="selectedCoupon && selectedCoupon.length > 0">
+          <ion-card-header>
+            <ion-card-title>{{ selectedCoupon[0].nombre_cupon }}</ion-card-title>
+            <ion-img *ngIf="selectedCoupon[0].image" [src]="selectedCoupon[0].image"></ion-img>
+          </ion-card-header>
+      
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Empresa</ion-label>
+              <ion-text>{{ selectedCoupon[0].nombre_empresa }}</ion-text>
+            </ion-item>
+      
+            <ion-item>
+              <ion-label>Ubicación Empresa</ion-label>
+              <ion-text>{{ selectedCoupon[0].ubicacion_empresa }}</ion-text>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Precio</ion-label>
+              <ion-text>{{ selectedCoupon[0].precio }}$</ion-text>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Codigo</ion-label>
+              <ion-text>{{ selectedCoupon[0].codigo }}</ion-text>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Descuento</ion-label>
+              <ion-text>{{ selectedCoupon[0].descuento }}%</ion-text>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Fecha Vencimiento</ion-label>
+              <ion-text>{{ selectedCoupon[0].fecha_vencimiento}}</ion-text>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Categoría</ion-label>
+              <ion-text>{{ selectedCoupon[0].categoria}}</ion-text>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Cantidad de Cupones</ion-label>
+              <ion-text>{{ selectedCoupon[0].cantidad}}</ion-text>
+            </ion-item>
+      
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </div>
+  </ion-split-pane>
+</ion-app>

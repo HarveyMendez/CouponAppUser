@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Carrito</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+            <ion-content>
+              <ion-list>
+                <ion-item *ngFor="let cupon of cuponesEnCarrito">
+                  <ion-label>
+                    <ion-img *ngIf="cupon.image" [src]="cupon.image"></ion-img>
+                    <h2>{{ cupon.nombre_cupon }}</h2>
+                    <p>Código: {{ cupon.nombre_empresa }}</p>
+                    <p>Nombre: {{ cupon.ubicacion_empresa }}</p>
+                    <p>Precio: {{ cupon.precio }}$</p>
+                    <p>Descuento: {{ cupon.descuento }}%</p>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+
+              <ion-item>
+                <ion-label>Total: {{ total | currency }}$</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Impuestos (13%): {{ impuestos | currency }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Total con impuestos: {{ totalConImpuestos | currency }}$</ion-label>
+              </ion-item>
+            
+              <ion-button expand="block" (click)="pagar()">Pagar</ion-button>
+            
+              <ion-button expand="block"  (click)="vaciarCarrito()">Vaciar Carrito</ion-button>
+            </ion-content>
+
+    </div>
+  </ion-split-pane>
+</ion-app>

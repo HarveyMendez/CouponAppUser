@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Pago</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list lines="full">
+          <ion-item>
+            <ion-label position="stacked">Nombre del tarjeta habiente</ion-label>
+            <ion-input type="text" placeholder="Nombre del tarjeta habiente" [(ngModel)]="nombreTarjetahabiente"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Número de cuenta (PAN)</ion-label>
+            <ion-input type="text" placeholder="Número de cuenta" [(ngModel)]="pan"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Fecha de vencimiento</ion-label>
+            <ion-input type="text" placeholder="MM/AA" [(ngModel)]="fechaVencimiento"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Código de seguridad</ion-label>
+            <ion-input type="password" placeholder="Código de seguridad" [(ngModel)]="codigoSeguridad"></ion-input>
+          </ion-item>
+        </ion-list>
+      
+        <ion-button expand="block" (click)="realizarPago()">Pagar</ion-button>
+      </ion-content>
+
+    </div>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,116 @@
+ion-title {
+    font-weight: bold; /* Título en negrita */
+    font-size: 1.2em; /* Tamaño del título */
+  }
+  
+  ion-content.custom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f8f9fa; /* Fondo gris claro */
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+  
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .avatar {
+    display: block;
+    margin: 0 auto 20px; /* Centrar la imagen horizontalmente y espacio debajo de la imagen */
+    width: 150px; /* Ancho constante para la imagen del avatar */
+    height: 150px; /* Alto constante para la imagen del avatar */
+    object-fit: cover; /* Ajuste de la imagen dentro del contenedor */
+    border-radius: 50%; /* Imagen circular */
+  }
+  
+  .text-container {
+    margin-bottom: 20px; /* Espacio debajo del contenedor de texto */
+  }
+  
+  .text1 {
+    font-size: 2em; /* Tamaño del texto grande */
+    font-weight: bold; /* Texto en negrita */
+    display: block; /* Mostrar en una nueva línea */
+  }
+  
+  .text2 {
+    font-size: 1.5em; /* Tamaño del texto grande */
+    color: #007bff; /* Color azul */
+    display: block; /* Mostrar en una nueva línea */
+  }
+  
+  .input-list {
+    margin-bottom: 20px; /* Espacio debajo de la lista de inputs */
+  }
+  
+  .input-item {
+    margin-bottom: 10px; /* Espacio entre los items */
+    border-radius: 8px; /* Bordes redondeados para los items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para los items */
+  }
+  
+  ion-input {
+    padding: 10px; /* Espacio interno */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el input */
+  }
+  
+  ion-input::part(native)::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+  ion-input::part(native)::-moz-placeholder {
+    text-align: center;
+  }
+  
+  ion-input::part(native):-ms-input-placeholder {
+    text-align: center;
+  }
+  
+  ion-input::part(native)::-ms-input-placeholder {
+    text-align: center;
+  }
+  
+  ion-input::part(native)::placeholder {
+    text-align: center;
+  }
+  
+  ion-button.login-button {
+    --background: #007bff; /* Color de fondo del botón de login */
+    --background-hover: #0056b3; /* Color de fondo del botón al pasar el ratón */
+    --background-activated: #0056b3; /* Color de fondo del botón al hacer clic */
+    color: #ffffff; /* Color del texto del botón */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espacio debajo del botón */
+  }
+  
+  ion-button.register-button {
+    --background: #28a745; /* Color de fondo del botón de registro */
+    --background-hover: #218838; /* Color de fondo del botón al pasar el ratón */
+    --background-activated: #218838; /* Color de fondo del botón al hacer clic */
+    color: #ffffff; /* Color del texto del botón */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      padding: 40px; /* Más espacio interno en pantallas grandes */
+    }
+  
+    .avatar {
+      width: 200px; /* Ancho constante para la imagen del avatar en pantallas grandes */
+      height: 200px; /* Alto constante para la imagen del avatar en pantallas grandes */
+    }
+  
+    ion-title {
+      font-size: 1.5em; /* Tamaño del título en pantallas grandes */
+    }
+  }

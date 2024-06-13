@@ -1,0 +1,56 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Registrar</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+        <ion-list class="input-list">
+          <ion-item class="input-item">
+            <ion-input type="text" placeholder="Nombre" [(ngModel)]="nombre"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-input type="text" placeholder="Apellidos" [(ngModel)]="apellido"></ion-input>
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-input type="text" placeholder="Cédula" [(ngModel)]="cedula"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="cedula && !validarCedula()" color="danger">
+            La cédula no es válida. Debe tener el formato ##-####-####.
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="fechaNacimiento"></ion-datetime>
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-input type="text" placeholder="Correo" [(ngModel)]="correo"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="correo && !validarCorreo()" color="danger">
+            El correo electrónico no es válido.
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-input type="password" placeholder="Contraseña" [(ngModel)]="contrasenia"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="contrasenia && !validarContrasenia()" color="danger">
+            La contraseña debe tener mas de 8 caracteres, debe contener al menos una minúscula, una mayúscula, un número y un carácter especial.
+          </ion-item>
+        </ion-list>
+
+        <ion-button class="login-button" expand="block" (click)="enviarDatos()">Registrarse</ion-button>
+        <ion-button class="register-button" expand="block" routerLink="/login">Ir a Login</ion-button>
+      </ion-content>
+    </div>
+  </ion-split-pane>
+</ion-app>

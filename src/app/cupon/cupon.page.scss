@@ -1,0 +1,57 @@
+
+  
+  ion-title {
+    font-weight: bold; /* Título en negrita */
+    font-size: 1.2em; /* Tamaño del título */
+  }
+  
+  ion-searchbar {
+    margin: 10px; /* Margen alrededor de la barra de búsqueda */
+  }
+  
+  ion-list {
+    margin: 0 10px; /* Margen alrededor de la lista */
+  }
+  
+  ion-item {
+    margin-bottom: 10px; /* Espacio entre los items */
+    border-radius: 8px; /* Bordes redondeados para los items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para los items */
+  }
+  
+  ion-item ion-label {
+    display: flex; /* Alineación de contenido dentro del label */
+    flex-direction: column;
+    gap: 5px; /* Espacio entre los elementos del label */
+  }
+  
+  ion-img {
+    width: 100px; /* Ancho constante para las imágenes */
+    height: 100px; /* Alto constante para las imágenes */
+    object-fit: cover; /* Ajuste de la imagen dentro del contenedor */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+  }
+  
+  ion-button {
+    --background: #007bff; /* Color de fondo del botón */
+    --background-hover: #0056b3; /* Color de fondo del botón al pasar el ratón */
+    --background-activated: #0056b3; /* Color de fondo del botón al hacer clic */
+    color: #ffffff; /* Color del texto del botón */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  @media (min-width: 768px) {
+    ion-item {
+      flex-direction: row; /* Items en fila en pantallas grandes */
+      align-items: center; /* Alineación de elementos en el centro */
+    }
+  
+    ion-item ion-label {
+      flex: 1; /* El label toma el espacio disponible */
+    }
+  
+    ion-item ion-button {
+      margin-left: 10px; /* Espacio entre el label y el botón */
+    }
+  }

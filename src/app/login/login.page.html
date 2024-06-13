@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Login</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding custom-content">
+        <div class="container">
+          <ion-img src="https://img.pikbest.com/png-images/qianku/login-avatar-icon_2373155.png!sw800" class="avatar"></ion-img>
+      
+          <div class="text-container">
+            <span class="text1">Iniciar</span>
+            <span class="text2">Sesión</span>
+          </div>
+      
+          <ion-list class="input-list">
+            <ion-item class="input-item">
+              <ion-input type="text" placeholder="Correo" [(ngModel)]="correo"></ion-input>
+            </ion-item>
+            
+            <ion-item class="input-item">
+              <ion-input type="password" placeholder="Contraseña" [(ngModel)]="contrasenia"></ion-input>
+            </ion-item>
+          </ion-list>
+      
+          <ion-button expand="block" shape="round" class="login-button" (click)="enviarDatosLogin()">Iniciar Sesión</ion-button>
+          <ion-button expand="block" shape="round" class="register-button" routerLink="/registro">Registrarse</ion-button>
+      
+        </div>
+      </ion-content>
+    </div>
+  </ion-split-pane>
+</ion-app>
+
+
